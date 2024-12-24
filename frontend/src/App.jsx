@@ -3,6 +3,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { AuthProvider } from './context/AuthContext';
+import Logout from './pages/Logout';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path='/logout' element={<Logout />} />
+          <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Router>
     </AuthProvider>
